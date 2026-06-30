@@ -1,0 +1,11 @@
+# runtime data / state (not code)
+sled_feed.db
+sled_feed.db-*
+cache/
+alerts.jsonl
+normalized_*.json
+__pycache__/
+*.pyc
+uk_feed.db
+uk_feed.db-*
+phase6_baseline.json

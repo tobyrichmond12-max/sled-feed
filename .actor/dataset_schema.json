@@ -1,0 +1,46 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "type": "object",
+    "properties": {
+      "solicitation_id": { "type": "string", "title": "Solicitation ID" },
+      "title": { "type": "string", "title": "Title" },
+      "agency": { "type": "string", "title": "Agency" },
+      "category": { "type": ["string", "null"], "title": "Category" },
+      "sub_category": { "type": ["string", "null"], "title": "Sub-category" },
+      "bid_type": { "type": ["string", "null"], "title": "Bid type" },
+      "posted_date": { "type": ["string", "null"], "title": "Posted date (ISO-8601, Central)" },
+      "due_date": { "type": ["string", "null"], "title": "Due date (ISO-8601, Central, incl. closing time)" },
+      "due_timezone": { "type": ["string", "null"], "title": "Due timezone" },
+      "status": { "type": "string", "title": "Status (Open/Closed/Awarded/Archived)" },
+      "document_links": { "type": "array", "title": "Document links (PDF/XLSX/DOCX)" },
+      "estimated_value": { "type": ["number", "null"], "title": "Estimated value (null — not available from this source)" },
+      "source": { "type": "string", "title": "Source" },
+      "source_url": { "type": "string", "title": "Official record URL" },
+      "first_seen": { "type": ["string", "null"], "title": "First seen" },
+      "last_seen": { "type": ["string", "null"], "title": "Last seen" }
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Solicitations",
+      "transformation": {
+        "fields": ["solicitation_id", "title", "agency", "category", "status",
+                   "due_date", "document_links", "source_url"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "solicitation_id": { "label": "Solicitation ID", "format": "text" },
+          "title": { "label": "Title", "format": "text" },
+          "agency": { "label": "Agency", "format": "text" },
+          "category": { "label": "Category", "format": "text" },
+          "status": { "label": "Status", "format": "text" },
+          "due_date": { "label": "Due (Central)", "format": "text" },
+          "document_links": { "label": "Documents", "format": "array" },
+          "source_url": { "label": "Official record", "format": "link" }
+        }
+      }
+    }
+  }
+}

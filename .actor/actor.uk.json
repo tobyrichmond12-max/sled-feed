@@ -1,0 +1,16 @@
+{
+  "actorSpecification": 1,
+  "name": "uk-contracts-finder-feed",
+  "title": "UK Government Tenders Feed — with Change Tracking",
+  "description": "Structured UK Contracts Finder tenders (Open Government Licence v3.0) plus a change feed (deadline changes, new awards, addenda) the portal doesn't surface.",
+  "version": "0.1",
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": { "dataset": "./dataset_schema.json" },
+  "readme": "../LISTING_UK.md",
+  "environmentVariables": {
+    "SLED_SOURCE": "uk_contracts_finder",
+    "SLED_FREE_MODE": "1"
+  }
+}

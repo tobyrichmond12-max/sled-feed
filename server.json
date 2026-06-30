@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.OWNER/sled-feed-mississippi",
+  "description": "Mississippi government procurement feed with CHANGE TRACKING — deadline extensions, new awards, and added addenda that the free state portal does not surface.",
+  "version": "0.1.0",
+  "repository": { "url": "https://github.com/OWNER/sled-feed", "source": "github" },
+  "_publish_note": "Set OWNER to the GitHub account before submitting. The official MCP registry requires the server reachable via a package (PyPI/npm/OCI) or remote; this stdio server is Python — package via PyPI or ship the repo to auto-crawling directories (Glama/PulseMCP) and Smithery. See PUBLISH.md.",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "sled-feed-mississippi",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "_note": "PyPI package not yet published; placeholder so the manifest validates. Alternatively use a git/OCI package entry."
+    }
+  ]
+}

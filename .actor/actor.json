@@ -1,0 +1,12 @@
+{
+  "actorSpecification": 1,
+  "name": "mississippi-procurement-feed",
+  "title": "Mississippi Government Procurement Feed — with Change Tracking",
+  "description": "Structured access to Mississippi state procurement solicitations, plus a change feed (deadline extensions, new awards, addenda) the free portal doesn't surface.",
+  "version": "0.1",
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": { "dataset": "./dataset_schema.json" },
+  "readme": "../LISTING.md"
+}

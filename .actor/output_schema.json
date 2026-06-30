@@ -1,0 +1,12 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Output",
+  "properties": {
+    "solicitations": {
+      "type": "string",
+      "title": "Solicitations / changes dataset",
+      "description": "The returned records (solicitations, or change events for list_recent_changes).",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}

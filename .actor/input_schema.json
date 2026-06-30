@@ -1,0 +1,67 @@
+{
+  "title": "Mississippi Procurement Feed input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "tool": {
+      "title": "Tool",
+      "type": "string",
+      "description": "Which operation to run: search opportunities, get one by id, or list recent changes.",
+      "enum": ["search_opportunities", "get_opportunity", "list_recent_changes"],
+      "editor": "select",
+      "default": "search_opportunities"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "description": "Solicitation status to filter by (search_opportunities).",
+      "enum": ["Open", "Closed", "Awarded", "Archived"],
+      "editor": "select",
+      "default": "Open"
+    },
+    "category": {
+      "title": "Category contains",
+      "type": "string",
+      "description": "Procurement category substring, e.g. 'INFORMATION TECHNOLOGY'.",
+      "editor": "textfield"
+    },
+    "keyword": {
+      "title": "Keyword",
+      "type": "string",
+      "description": "Keyword to match in the solicitation title or category.",
+      "editor": "textfield"
+    },
+    "due_after": {
+      "title": "Due after (YYYY-MM-DD)",
+      "type": "string",
+      "description": "Only solicitations with a due date on/after this date.",
+      "editor": "textfield"
+    },
+    "due_before": {
+      "title": "Due before (YYYY-MM-DD)",
+      "type": "string",
+      "description": "Only solicitations with a due date on/before this date.",
+      "editor": "textfield"
+    },
+    "solicitation_id": {
+      "title": "Solicitation ID",
+      "type": "string",
+      "description": "Bid number to fetch (used by get_opportunity).",
+      "editor": "textfield"
+    },
+    "since": {
+      "title": "Changes since (ISO-8601)",
+      "type": "string",
+      "description": "For list_recent_changes: only changes at/after this timestamp.",
+      "editor": "textfield"
+    },
+    "limit": {
+      "title": "Max results",
+      "type": "integer",
+      "description": "Maximum number of records to return.",
+      "editor": "number",
+      "default": 50
+    }
+  },
+  "required": ["tool"]
+}
